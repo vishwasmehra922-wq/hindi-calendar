@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>हिंदी कैलेंडर 2027</title>
+<link href="https://fonts.googleapis.com/css2?family=Mukta:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#fffaf0;--card:#fff;--tx:#2b1d12;--mu:#7a6a5a;--ln:#eadfce;--ac:#c2410c;--g:#dc2626;--gb:#fee2e2;--f:#c2410c;--fb:#ffedd5;--r:#1d4ed8;--rb:#dbeafe;--sun:#dc2626;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17120d;--card:#221a13;--tx:#f5eadb;--mu:#a8987f;--ln:#3a2e22;--ac:#fb923c;--g:#f87171;--gb:#4a1d1d;--f:#fb923c;--fb:#4a2a12;--r:#93c5fd;--rb:#1e2f52;--sun:#f87171}}
+:root[data-theme="dark"]{--bg:#17120d;--card:#221a13;--tx:#f5eadb;--mu:#a8987f;--ln:#3a2e22;--ac:#fb923c;--g:#f87171;--gb:#4a1d1d;--f:#fb923c;--fb:#4a2a12;--r:#93c5fd;--rb:#1e2f52;--sun:#f87171}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--tx);font-family:"Mukta","Noto Sans Devanagari","Nirmala UI",system-ui,sans-serif;line-height:1.35}
+header{text-align:center;padding:22px 14px 8px}
+h1{margin:0;font-size:clamp(26px,6vw,40px);font-weight:800;color:var(--ac)}
+header p{margin:4px 0 0;color:var(--mu);font-size:14px}
+.lg{display:flex;flex-wrap:wrap;gap:8px 14px;justify-content:center;padding:10px 14px;font-size:13px}
+.lg span:before{content:"";display:inline-block;width:12px;height:12px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+.lg .g:before{background:var(--g)}.lg .f:before{background:var(--f)}.lg .r:before{background:var(--r)}
+main{display:grid;grid-template-columns:repeat(auto-fill,minmax(310px,1fr));gap:14px;max-width:1300px;margin:0 auto;padding:8px 12px 20px}
+.m{background:var(--card);border:1px solid var(--ln);border-radius:14px;padding:12px;min-width:0}
+.m h2{margin:0;font-size:20px;font-weight:800;display:flex;justify-content:space-between;align-items:baseline;gap:8px}
+.m h2 small{font-size:12px;font-weight:400;color:var(--mu);text-align:right}
+.gr{display:grid;grid-template-columns:repeat(7,1fr);gap:3px;margin-top:8px}
+.w{text-align:center;font-size:12px;font-weight:600;color:var(--mu);padding:3px 0}
+.w:first-child{color:var(--sun)}
+.c{min-height:44px;border-radius:8px;padding:3px 2px;text-align:center;font-size:15px;border:1px solid transparent;display:flex;flex-direction:column;justify-content:center;align-items:center}
+.c b{font-weight:600;line-height:1.1}
+.c i{font-style:normal;font-size:10px;color:var(--mu);line-height:1.2;margin-top:1px}
+.c.s b{color:var(--sun)}
+.c.g{background:var(--gb);color:var(--g)}.c.g b{color:var(--g)}
+.c.f{background:var(--fb)}.c.f b{color:var(--f)}
+.c.r{background:var(--rb)}.c.r b{color:var(--r)}
+.c.t{border-color:var(--ac);box-shadow:0 0 0 1px var(--ac)}
+ul{list-style:none;margin:10px 0 0;padding:8px 0 0;border-top:1px dashed var(--ln);font-size:13.5px}
+li{display:flex;gap:8px;padding:2px 0}
+li em{font-style:normal;font-weight:600;min-width:62px;color:var(--mu)}
+li.g span{color:var(--g)}li.f span{color:var(--f)}li.r span{color:var(--r)}
+footer{max-width:900px;margin:0 auto;padding:0 16px 28px;color:var(--mu);font-size:12.5px;text-align:center}
+@media print{.lg{display:none}main{grid-template-columns:repeat(3,1fr)}body{background:#fff}}
+</style>
+</head>
+<body>
+<header>
+<h1>🪔 हिंदी कैलेंडर 2027</h1>
+<p>तारीख़ • वार • हिंदी माह • तिथि • त्योहार • छुट्टियाँ</p>
+</header>
+<div class="lg"><span class="g">सरकारी / प्रमुख छुट्टी</span><span class="f">त्योहार / पर्व</span><span class="r">क्षेत्रीय / वैकल्पिक</span><span>🌕 पूर्णिमा &nbsp; 🌑 अमावस्या &nbsp; शु = शुक्ल, कृ = कृष्ण पक्ष</span></div>
+<main id="cal"></main>
+<footer>⚠️ तिथियाँ (शु/कृ अंक) लगभग हैं, ±1 दिन का अंतर हो सकता है। ईद, मुहर्रम और गुरु नानक जयंती चाँद/पंचांग पर निर्भर हैं। क्षेत्रीय छुट्टियाँ राज्य अनुसार बदलती हैं। पक्की तारीख़ के लिए अपने राज्य की सरकारी सूची या पंचांग देखें।</footer>
+<script>
+const MN=["जनवरी","फ़रवरी","मार्च","अप्रैल","मई","जून","जुलाई","अगस्त","सितंबर","अक्टूबर","नवंबर","दिसंबर"];
+const WD=["रवि","सोम","मंगल","बुध","गुरु","शुक्र","शनि"];
+const TN=["प्रतिपदा","द्वितीया","तृतीया","चतुर्थी","पंचमी","षष्ठी","सप्तमी","अष्टमी","नवमी","दशमी","एकादशी","द्वादशी","त्रयोदशी","चतुर्दशी"];
+const dn=(m,d)=>Date.UTC(2027,m-1,d)/864e5;
+// अमावस्या (N) और पूर्णिमा (F) की अनुमानित तारीख़ें [माह, दिन]
+const E=[["N",0,9],["F",0,24],["N",1,7],["F",1,22],["N",2,6],["F",2,20],["N",3,8],["F",3,22],["N",4,6],["F",4,20],["N",5,6],["F",5,20],["N",6,4],["F",6,19],["N",7,4],["F",7,18],["N",8,2],["F",8,17],["N",9,1],["F",9,15],["N",9,30],["F",10,15],["N",10,29],["F",11,13],["N",11,28],["F",12,13],["N",12,27],["F",13,11]].map(e=>[e[0],dn(e[1],e[2])]);
+// हर पूर्णिमा के अगले दिन से नया हिंदी माह (पूर्णिमांत)
+const FN=["पौष","माघ","फाल्गुन","चैत्र","वैशाख","ज्येष्ठ","आषाढ़","श्रावण","भाद्रपद","आश्विन","कार्तिक","मार्गशीर्ष","पौष","माघ"];
+const FS=E.filter(e=>e[0]==="F");
+function info(m,d){
+  const x=dn(m,d),i=E.findIndex(e=>e[1]>=x),q=E[i],p=E[i-1];
+  let t,pk;
+  if(q[1]===x){t=15;pk=q[0]==="F"?"शुक्ल":"कृष्ण"}
+  else{pk=p[0]==="N"?"शुक्ल":"कृष्ण";t=Math.min(15,Math.floor(15*(x-p[1])/(q[1]-p[1]))+1)}
+  let mo=FN[0];FS.forEach((f,k)=>{if(f[1]<x)mo=FN[k+1]});
+  const tn=t===15?(pk==="शुक्ल"?"पूर्णिमा":"अमावस्या"):TN[t-1];
+  const lab=t===15?(pk==="शुक्ल"?"🌕":"🌑"):(pk==="शुक्ल"?"शु":"कृ")+t;
+  return{mo,lab,txt:pk+" पक्ष "+tn,sam:x>=dn(4,7)?2084:2083};
+}
+// g = सरकारी/प्रमुख छुट्टी, f = त्योहार, r = क्षेत्रीय/वैकल्पिक
+const H={
+"1-1":["नया साल","f"],"1-14":["मकर संक्रांति / पोंगल","f"],"1-26":["गणतंत्र दिवस","g"],
+"2-19":["शिवाजी जयंती","r"],"2-20":["माघ पूर्णिमा / रविदास जयंती","f"],
+"3-6":["महाशिवरात्रि","g"],"3-10":["ईद-उल-फ़ित्र (चाँद पर निर्भर)","g"],"3-21":["होलिका दहन","f"],"3-22":["होली","g"],"3-26":["गुड फ्राइडे","g"],"3-28":["ईस्टर","f"],
+"4-7":["गुड़ी पड़वा / उगादी / हिंदू नववर्ष","f"],"4-14":["अंबेडकर जयंती","g"],"4-15":["राम नवमी","g"],"4-19":["महावीर जयंती","g"],"4-20":["हनुमान जयंती","f"],
+"5-17":["ईद-उल-अज़हा / बकरीद","g"],"5-20":["बुद्ध पूर्णिमा","g"],
+"6-16":["मुहर्रम (चाँद पर निर्भर)","g"],
+"7-5":["रथ यात्रा","r"],"7-18":["गुरु पूर्णिमा","f"],
+"8-15":["स्वतंत्रता दिवस","g"],"8-17":["रक्षा बंधन","f"],"8-25":["जन्माष्टमी","g"],
+"9-4":["गणेश चतुर्थी","f"],"9-12":["ओणम","r"],
+"10-2":["गांधी जयंती","g"],"10-8":["महा नवमी","f"],"10-9":["दशहरा (विजयादशमी)","g"],"10-29":["दीवाली","g"],"10-30":["गोवर्धन पूजा","f"],"10-31":["भाई दूज","f"],
+"11-13":["गुरु नानक जयंती / कार्तिक पूर्णिमा","g"],
+"12-25":["क्रिसमस","g"]
+};
+const T=new Date(),ty=T.getFullYear()===2027;
+let out="";
+for(let m=1;m<=12;m++){
+  const n=new Date(2027,m,0).getDate(),first=new Date(2027,m-1,1).getDay();
+  let cells=WD.map(w=>`<div class="w">${w}</div>`).join("")+'<div></div>'.repeat(first);
+  const names=[],hl=[];let sam=[];
+  for(let d=1;d<=n;d++){
+    const f=info(m,d),h=H[m+"-"+d],wd=(first+d-1)%7;
+    if(!names.includes(f.mo))names.push(f.mo);
+    if(!sam.includes(f.sam))sam.push(f.sam);
+    const cls=[wd===0?"s":"",h?h[1]:"",ty&&T.getMonth()===m-1&&T.getDate()===d?"t":""].join(" ");
+    cells+=`<div class="c ${cls}" title="${f.mo} ${f.txt}${h?" • "+h[0]:""}"><b>${d}</b><i>${f.lab}</i></div>`;
+    if(h)hl.push(`<li class="${h[1]}"><em>${d} ${WD[wd]}</em><span>${h[0]}</span></li>`);
+  }
+  out+=`<section class="m"><h2>${MN[m-1]} 2027<small>${names.join(" • ")}<br>विक्रम संवत् ${sam.join("/")}</small></h2><div class="gr">${cells}</div>${hl.length?"<ul>"+hl.join("")+"</ul>":""}</section>`;
+}
+document.getElementById("cal").innerHTML=out;
+</script>
+</body>
+</html>
